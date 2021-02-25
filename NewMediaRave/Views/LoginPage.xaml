@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="NewMediaRave.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout x:Name="MasterStack">
+
+            <StackLayout x:Name="LogoIconStack" VerticalOptions="FillAndExpand">
+                <Image x:Name="MediaRaveLogo" Source="MediaRaveLogo.png" Margin="10, 30, 10, 0"/>
+            </StackLayout>
+
+            <StackLayout x:Name="LoginStack" VerticalOptions="StartAndExpand">
+                <StackLayout.Padding>
+                    <OnIdiom x:TypeArguments="Thickness">
+                        <OnIdiom.Phone>20,0,20,10</OnIdiom.Phone>
+                        <!--Padding for login info. fields are left, top, right, bottom. K-->
+                        <!--<OnIdiom.Tablet></OnIdiom.Tablet> in case we decide to implement this later. K-->
+                    </OnIdiom>
+                </StackLayout.Padding>
+
+
+
+                <StackLayout Padding="10,0,10,0" VerticalOptions="Center">
+                    <Label x:Name="Lbl_UserName" Text="Username" />
+                    <Entry x:Name="Entry_Username" Placeholder="Username" />
+                    <Label x:Name="Lbl_Password" Text="Pasword" />
+                    <Entry x:Name="Entry_Password" Placeholder="Password" />
+                    <Button x:Name="Btn_Signin" Text="Sign In" Clicked="SignInProcedure"/>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
